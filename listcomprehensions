@@ -1,0 +1,30 @@
+##Prompt:
+All permutations of  are:
+.
+
+Print an array of the elements that do not sum to .
+
+
+Input Format
+
+Four integers  and , each on a separate line.
+
+Constraints
+
+Print the list in lexicographic increasing order.
+
+##answer
+
+x = int(input())
+y = int(input())
+z = int(input())
+n = int(input())
+
+# List comprehension to generate all possible coordinates
+coordinates = [[i, j, k] for i in range(x+1) for j in range(y+1) for k in range(z+1)]
+
+# Filter out the coordinates that do not sum up to n
+result = [c for c in coordinates if sum(c) != n]
+
+# Print the final result
+print(result)
