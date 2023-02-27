@@ -1,0 +1,23 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    # Split the input string by space character
+    names = s.split(' ')
+    capitalized_names = []
+    for name in names:
+        # Capitalize the first character of each name
+        capitalized_names.append(name.capitalize())
+    # Join the capitalized names back using space as separator
+    return ' '.join(capitalized_names)
+
+if __name__ == '__main__':
+    s = input()
+    result = solve(s)
+    print(result)
